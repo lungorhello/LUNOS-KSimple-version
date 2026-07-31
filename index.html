@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>lungorstudio</title>
+  <meta name="description" content="lungor 的个人站：PPT OS，以及一些奇奇怪怪的东西。">
+  <!-- 朱红方块 favicon，内联 SVG，不依赖外部图标资源 -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23141210'/><rect x='9' y='9' width='14' height='14' fill='%23C43E1C'/></svg>">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- 首屏加载动画：朱红方块 + 进度线，约 1.6s 后淡出 -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__sq"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__word">LUNGORSTUDIO</div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">LUNGORSTUDIO</div>
+      <nav class="nav" aria-label="主导航">
+        <button data-target="home" class="active">首页</button>
+        <button data-target="laolao">唠唠</button>
+        <button data-target="download">下载</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="frame">
+    <!-- 首页 -->
+    <section class="pane is-active" id="home">
+      <div class="meta">01 / 主线</div>
+      <h1 class="display">PPT OS</h1>
+
+      <div class="meta" style="margin-top:var(--space-4)">最近更新</div>
+      <div id="home-feed"></div>
+
+      <h2 class="section-title">奇奇怪怪</h2>
+      <div id="home-weird"></div>
+    </section>
+
+    <!-- 唠唠 -->
+    <section class="pane" id="laolao">
+      <div class="meta">唠唠</div>
+      <h1 class="display">唠唠</h1>
+      <div id="laolao-list" style="margin-top:var(--space-3)"></div>
+
+      <div id="laolao-post" class="post-hidden" hidden>
+        <button class="post__back" id="laolao-back">← 返回唠唠</button>
+        <div class="meta" id="laolao-post-meta"></div>
+        <h1 class="display" id="laolao-post-title"></h1>
+        <div class="post__body" id="laolao-post-body"></div>
+      </div>
+    </section>
+
+    <!-- 下载 -->
+    <section class="pane" id="download">
+      <div class="meta">下载</div>
+      <h1 class="display">下载</h1>
+      <div id="download-list" style="margin-top:var(--space-3)"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    LUNGORSTUDIO · 静态站 · 无评论 · 无投稿
+  </footer>
+
+  <script src="data/posts.js"></script>
+  <script src="data/downloads.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
